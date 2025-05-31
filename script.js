@@ -52,10 +52,15 @@
 
 function sum(a,b){
 sum(a+b)
-sum()
 }
 sum(10,30)
 console.log(sum);
+function add(a,b,c){
+    add(a+c,b)
+}
+console.log(20,30,50);
+
+
 
 
 
