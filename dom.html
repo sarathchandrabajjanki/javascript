@@ -1,0 +1,83 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <span id="main">
+
+        </span>
+
+    
+    <script>
+        var main=document.getElementById("main")
+        var text=document.createElement("h1")
+        text.textContent="welcome to the world of sarath"
+        main.appendChild(text)
+        text.style.color="aqua"
+        text.style.backgroundColor="black"
+        text.style.width="300px"
+    </script>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">
+        <input id="num1" type="text">
+        <input style="width: 20px;border: solid black;border-color: red;" id="add" type="text">
+
+        <input id="num2" type="text">
+        <button onclick="calci()">click</button>
+
+    </div>
+    <script>
+        function calci() {
+            var div=document.getElementById("div")
+            var num1=parseInt(document.getElementById("num1").value)
+            var num2=parseInt(document.getElementById("num2").value)
+            var add=document.getElementById("add").value
+            
+             
+            var h1=document.createElement("h1")
+            
+            
+            if (add=="+") {
+                h1.textContent=num1+num2
+                
+            }
+            else if(add=="-"){
+                h1.textContent=num1-num2
+
+            }
+             else if(add=="*"){
+                h1.textContent=num1*num2
+
+            }
+             else if(add=="%"){
+                h1.textContent=num1%num2
+
+            }
+             else{
+                h1.textContent=error
+
+            }
+                
+
+            div.appendChild(h1)
+            
+        }
+    </script>
+
+    
+</body>
+</html>

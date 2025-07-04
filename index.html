@@ -1,3 +1,30 @@
+<!--  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div"></div>
+    <input id="num1" type="text">
+    <input id="num2" type="text">
+    <button onclick="add()">to add </button>
+    <script>
+        function add(){
+            var div=document.getElementById("div")
+            var a=parseInt(document.getElementById("num1").value)
+            var b=parseInt(document.getElementById("num2").value)
+            var result=a+b
+            var h1=document.createElement("h1")
+            h1.textContent=result
+            div.appendChild(h1)
+        }
+    </script>
+    
+</body>
+</html> -->
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +33,43 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="div"></div>
+    <input id="number" type="text">
+    <button onclick="check()">check</button>
+    
     <script>
-        var a= prompt("enter number")
+function check(){
+    var div=document.getElementById("div")
+    var value=parseInt(document.getElementById("number").value)
+    var h1 =document.createElement("h1")
+    
+    
+    
+    if(value%2==0){
+        h1.textContent=`the given number ${value} is even`
+        
+    }
+    else{
+        h1.textContent=`the given number ${value} is odd`
+        
+        
+    }
+    div.appendChild(h1)
+}
     </script>
     
+</body>
+</html> --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <input type="text">
+    <button onclick="alert('you are clicked')">click</button>
 </body>
 </html>

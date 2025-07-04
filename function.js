@@ -158,19 +158,21 @@ function bignumber(a,b) {
 console.log(bignumber(20,30));
 
 
+for (var k = 1; k <=50; k++) {
+    console.log(k);
+    
+    
+}
 
+for (let k = 50; k >=1 ;k--){
+    console.log(k);
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+var a=50
+var b=1
+while (a>=b) {
+    console.log(a,"a is bigger");
+    a--
+    
+}
