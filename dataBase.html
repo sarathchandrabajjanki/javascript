@@ -1,0 +1,92 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="enter your name" id="name" type="text">
+    <input placeholder="enter your email" id="email" type="text">
+    <button id="button " onclick="push()">click</button>
+    <script>
+        
+        async function push() {
+            var a=document.getElementById("name").value
+        var b=document.getElementById("email").value
+        if(a.length == 0 && b.length == 0){
+            alert("fil the fileds")
+        }else{
+
+        
+        var data={
+            name:a,
+            email:b
+        }
+            
+        var save= await fetch("https://686e132bc9090c4953882b31.mockapi.io/users/users",{
+            method:"post",
+            headers:{"content-type":"application/json"},
+            body:JSON.stringify(data)
+        })
+        if(save.ok){
+            alert("data send success")
+            window.location.href = "ecommercs.html"
+            document.getElementById("name") = ""
+            document.getElementById("email") = ""
+        }
+        else{
+            alert("failed to send data");
+            
+        }
+        }
+    }
+        
+        
+    </script>
+    
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="enter name" id="name" type="text">
+    <input placeholder="enter email" id="email" type="text">
+    <button onclick="push()">click</button>
+    <script>
+        async function push() {
+            
+            try {
+                var inputname=document.getElementById("name").value
+                var inputmail=document.getElementById("email").value
+                var data={
+                    name:inputname,
+                    mail:inputmail
+                }
+                var save  = await fetch("https://686e132bc9090c4953882b31.mockapi.io/users/users",{
+                    method:"post",
+                    headers:{"content-type":"application/json"},
+                    body:JSON.stringify(data)
+                })
+                if(save.ok){
+                    alert("data send success")
+                }
+                else{
+                    alert("error to send data")
+                }
+                
+            } catch (error) {
+                alert("api error")
+                
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
