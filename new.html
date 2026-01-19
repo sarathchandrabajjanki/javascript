@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main"> 
+     <ol id="div">
+    <input id="new" type="text">
+    <button onclick="createtask()" >add task</button>
+    <button onclick="deletes()">delete task</button>
+    </ol>
+    </div>
+  
+    <script>
+        function createtask(){
+            var div=document.getElementById("div")
+            var a =document.getElementById("new").value
+            var h1=document.createElement("li")
+            h1.textContent=a
+            div.appendChild(h1)
+        }
+        function deletes(){
+            main.textContent=""
+        }
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>create a acoount</h1>
+    <input placeholder="ENTER   A EMAIL"  id="email" type="text">
+    <input placeholder="ENTER   A PASSWORD "  id="pswd" type="text">
+    <input placeholder="ENTER   A NAME"  id="name" type="text">
+    <button id="button">create account</button>
+
+    <h1>login here</h1>
+    <input placeholder="ENTER   A EMAIL"  id="emails" type="text">
+    <input placeholder="ENTER   A PASSWORD "  id="pswds" type="text">
+    <button id="but">signin</button>
+
+
+
+    <script>
+        var button=document.getElementById("button")
+        button.addEventListener("click",()=>{
+        var email=document.getElementById("email").value
+        var passwword=document.getElementById("pswd").value
+        var name=document.getElementById("name").value
+        localStorage.setItem("email",email)
+        localStorage.setItem("pswd",passwword)
+        localStorage.setItem("name",name)
+        console.log(localStorage);
+        
+        })
+        var signin=document.getElementById("but")
+        signin.addEventListener("click",()=>{
+        var email1=document.getElementById("emails").value
+        var password1=document.getElementById("pswds").value
+        var a=  localStorage.getItem("email")
+        var b= localStorage.getItem("pswd")
+        if(email1==a && password1==b){
+            alert("login success")
+        }
+        else{
+            alert("login failed")
+        }
+
+        })
+
+        
+
+    </script>
+
+    
+</body>
+</html>
